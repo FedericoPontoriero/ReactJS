@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
-import "./App.css";
 import tasks from "./sample/tasks.json";
 import Tasks from "./components/Tasks";
 import TaskForm from "./components/TaskForm";
@@ -14,7 +13,7 @@ class App extends Component {
 
 	addTask = (title, description) => {
 		const newTask = {
-			title: title,
+			title,
 			description: description,
 			id: this.state.tasks.length,
 		};
